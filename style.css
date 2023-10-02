@@ -1,0 +1,131 @@
+header {
+    background-color: bisque;
+    height: 30px;
+    text-align: left;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+
+.linkid:hover {
+    background-color: rgb(37, 177, 130);
+}
+
+header img {
+    float: right;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+
+body {
+    width: 100%;
+    float: left;
+}
+
+.sideBarVasak {
+    width: 22%;
+    float: left;
+    height: 850px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.artikklid {
+    background-color: white;
+    width: 50%;
+    float: left;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 5px;
+}
+
+.sideBarParem {
+    width: 22%;
+    float: left;
+    height: 850px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: bisque;
+    float: left;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.avatarid {
+    padding-top: 3px;
+    padding-left: 3%;
+}
+
+article {
+    background-color: #F36F25;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+article p {
+    margin-left: 3%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+}
+
+#artikliPea p {
+    float: right;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+
+.artikklid picture img {
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.artikklid picture p {
+    margin-left: 3%;
+    margin-top: 0%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+
+#meeldib {
+    margin-top: -10px;
+    margin-left: 3%;
+    width: 20px;
+    height: 20px;
+}
+#login{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top:33%;
+    margin-bottom:33%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 100;
+}
+#welcome{
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top:100px;
+    font-size:30px;
+}
+#loginrequest{
+    text-align: center;
+    margin-top:20px;
+    font-size:30px;
+}
+#loginrequesttext{
+    font-size:large;
+}
+#loginbutton{
+    background-color: beige;
+    font-size: large;
+}
+#forgot{
+    font-size: large;
+}
