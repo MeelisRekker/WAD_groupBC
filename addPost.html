@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <div class="topnav">
+        <a href="index.html" class="linkid">Home</a>
+        <img src="images/meesAvatar.png" alt="Mehe avatar">
+    </div>
+</header>
+
+<body>
+    <article id="post">
+        <form action="index.html" method="get">
+            <div class="postForm">
+                <div class="postFormRow">
+                    <label for="postBody">Post body</label>
+                    <textarea id="postBody" required name="postBody" >enter text here...</textarea>
+                </div>
+                <div class="postFormRow">
+                    <label for="selectFile">Select file</label>
+                    <input type="file" id="selectFile" name="selectFile">
+                </div>
+            </div>
+            <button id="createPost" type="submit">Create post</button><br>
+        </form>
+    </article>
+</body>
+
+</html>
