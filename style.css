@@ -62,7 +62,7 @@ footer {
     padding-left: 3%;
 }
 
-article {
+article, main {
     background-color: #F36F25;
     margin-top: 5px;
     border-radius: 5px;
@@ -72,6 +72,10 @@ article p {
     margin-left: 3%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 10px;
+}
+
+article p + picture {
+    padding-left: 2px;
 }
 
 #artikliPea p {
@@ -101,8 +105,6 @@ article p {
 }
 
 #login {
-    margin-left: 25%;
-    margin-right: 25%;
     margin-top:33%;
     margin-bottom:33%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -111,11 +113,10 @@ article p {
 }
 
 #welcome{
-    margin-left: 33%;
-    margin-right: 33%;
     margin-top:100px;
     font-size:30px;
 }
+
 #loginrequest{
     text-align: center;
     margin-top:20px;
@@ -135,9 +136,30 @@ article p {
     font-size: large;
 }
 
+@media (max-width: 400px) {
+    #login {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (min-width: 401px) {
+    #login {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    #welcome{
+        margin-left: 33%;
+        margin-right: 33%;
+    }
+}
+
+label::first-letter {
+    text-transform: uppercase;
+}
+
 #post {
-    margin-left: 25%;
-    margin-right: 25%;
     margin-top:10%;
     margin-bottom:33%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -154,11 +176,39 @@ article p {
 
 .postForm > .postFormRow {
     display: flex;
-    flex-direction: row;
     gap: 10px;
+}
+
+.postFormRow label ~ input{
+    padding-left: 2px;
+}
+
+@media (max-width: 400px){
+    .postForm > .postFormRow {
+        flex-direction: column;
+    }
+
+    #post {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (min-width: 401px){
+    .postForm > .postFormRow {
+        flex-direction: row;
+    }
+
+    #post {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+#postBody {
+    flex-grow: 0.9;
 }
 
 #createPost {
     margin: 10px;
-
 }
