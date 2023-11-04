@@ -12,7 +12,7 @@ fetch('https://api.jsonbin.io/v3/b/6545730c54105e766fcb17bc')
                 if(json.record.users[i].gender === "male"){
                     avatar.src = 'images/meesAvatar.png';
                 }else{
-                    avatar.src = 'images/meesAvatar.png';
+                    avatar.src = 'images/naineAvatar.png';
                 }
                 avatar.className = "avatarid";
                 artikliPea.appendChild(avatar);
