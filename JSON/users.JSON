@@ -1,1 +1,37 @@
-
+{
+    "users": [
+      {
+        "userId": 1,
+        "firstName": "Kaarel",
+        "userName": "kaarel1337",
+        "emailAddress": "kaarel1337@gmail.com",
+        "postitus": "Otsin kaaslasi rühmatöö jaoks aines Sissejuhatus Andmeteadusesse, olen rühmas 8. Palun kirjutage kui on huvi ja otsite kaaslasi.",
+        "gender": "male",
+        "pilt": "",
+        "kuupaev": "Sept 23, 2023",
+        "piltText": ""
+      },
+      {
+        "userId": 2,
+        "firstName": "Eleri",
+        "userName": "ele99",
+        "emailAddress": "eleri.kreek@gmail.com",
+        "postitus": "Kas keegi teab mis ruumis külalislektor lõunast loengut peab?",
+        "gender": "female",
+        "pilt": "https://s3-ap-southeast-1.amazonaws.com/tksproduction/bmtimages/pY3BnhPQYpTxasKfx.jpeg",
+        "kuupaev": "Sept 20, 2023",
+        "piltText": "Just chilling out :)"
+      },
+      {
+        "userId": 3,
+        "firstName": "Johanne",
+        "userName": "Johanne",
+        "emailAddress": "johanne.jaaran@gmail.com",
+        "postitus": "Kas kellegil on autoga liikumist Tartu ja Tallinna vahel? Klapiksin kütuse kulud, palun kirjuta.",
+        "gender": "female",
+        "pilt": "",
+        "kuupaev": "Sept 15, 2023",
+        "piltText": ""
+      }
+    ]
+  }
