@@ -1,5 +1,5 @@
-fetch('https://api.jsonbin.io/v3/b/6545730c54105e766fcb17bc')
-        //fetch('JSON/users.JSON') //Fetch data from local JSON file
+// fetch('https://api.jsonbin.io/v3/b/6545730c54105e766fcb17bc') //Fetch from web
+fetch('/JSON/users.json') //Fetch data from local JSON file
         .then((response) => response.json())
         .then(json => {
             let asd = json.record.users.length;

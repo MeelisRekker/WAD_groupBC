@@ -1,4 +1,5 @@
 {
+  "record": {
     "users": [
       {
         "userId": 1,
@@ -7,7 +8,7 @@
         "emailAddress": "kaarel1337@gmail.com",
         "postitus": "Otsin kaaslasi rühmatöö jaoks aines Sissejuhatus Andmeteadusesse, olen rühmas 8. Palun kirjutage kui on huvi ja otsite kaaslasi.",
         "gender": "male",
-        "pilt": "",
+        "pilt": "https://res.cloudinary.com/dzuusseql/image/upload//w_600,c_scale/v1699171418/20230917_080825_j9xxoa.jpg",
         "kuupaev": "Sept 23, 2023",
         "piltText": ""
       },
@@ -18,7 +19,7 @@
         "emailAddress": "eleri.kreek@gmail.com",
         "postitus": "Kas keegi teab mis ruumis külalislektor lõunast loengut peab?",
         "gender": "female",
-        "pilt": "https://s3-ap-southeast-1.amazonaws.com/tksproduction/bmtimages/pY3BnhPQYpTxasKfx.jpeg",
+        "pilt": "https://res.cloudinary.com/dzuusseql/image/upload/v1699171719/pY3BnhPQYpTxasKfx_vol0vc.jpg",
         "kuupaev": "Sept 20, 2023",
         "piltText": "Just chilling out :)"
       },
@@ -34,4 +35,10 @@
         "piltText": ""
       }
     ]
+  },
+  "metadata": {
+    "id": "6545730c54105e766fcb17bc",
+    "private": false,
+    "createdAt": "2023-11-03T22:24:12.616Z"
   }
+}
