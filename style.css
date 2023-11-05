@@ -1,5 +1,5 @@
 header {
-    background-color: bisque;
+    background-color: rgb(217, 238, 220);
     height: 30px;
     text-align: left;
     padding-top: 10px;
@@ -21,6 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(10,141,167,1) 100%);
 }
 
 .mainContent {
@@ -33,16 +34,27 @@ body {
     background-color: gray;
     border-radius: 5px;
     margin-top: 15px;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(217,215,169,1) 60%, rgba(10,141,167,1) 100%);
 }
 
 .artikklid {
-    background-color: white;
+    background-color: rgb(27, 61, 58);
     width: 50%;
     height: auto;
     margin-top: 10px;
     margin-left: 3%;
     margin-right: 3%;
     border-radius: 5px;
+}
+.postDate {
+    float: right;
+    margin-top: 7px;
+    margin-right: 10px;
+    background-color: white;
+    /*Effects changeable buy changing order, last one counts.*/
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 rgba(0,0,0,0.5);
+    box-shadow: 3px 2px 2px papayawhip, -0.2em 0 .5em yellowgreen;
+    border-radius: 3px;
 }
 
 footer {
@@ -220,13 +232,22 @@ label::first-letter {
     margin-left: 85%;
     margin-right:0%;
     width:15%;
-    height:  150px;
-    position:fixed;
+    position:relative;
     z-index: 98;
+    border-radius: 5px;
 }
+
+#dropdown-content p {
+    padding-left:5px;
+}
+
+#dropdown-content a {
+    padding-left: 5px;
+}
+
 #profileImage{
     z-index: 99;
-    position: fixed;
-    top: 1em;
+    position: absolute;
+    top: 0.5em;
     right: 1em;
 }

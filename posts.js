@@ -19,6 +19,7 @@ fetch('/JSON/users.json') //Fetch data from local JSON file
                 artikliPea.appendChild(avatar);
                 let kuupaev = document.createElement("p");
                 kuupaev.innerText = json.record.users[i].kuupaev;
+                kuupaev.className = "postDate";
                 artikliPea.append(kuupaev);
                 artikkel.append(artikliPea);
                 //artikliPea l6pp       
