@@ -1,4 +1,4 @@
-// fetch('https://api.jsonbin.io/v3/b/6545730c54105e766fcb17bc') //Fetch from web
+// fetch('https://api.jsonbin.io/v3/b/6547c43254105e766fcbc89d') //Fetch from web
 fetch('/JSON/users.json') //Fetch data from local JSON file
         .then((response) => response.json())
         .then(json => {
