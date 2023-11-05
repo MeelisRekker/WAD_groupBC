@@ -46,6 +46,11 @@ body {
     margin-right: 3%;
     border-radius: 5px;
 }
+.userName{
+    position: absolute;
+    margin-left: 60px;
+    box-shadow: 3px 2px 2px black;
+}
 .postDate {
     float: right;
     margin-top: 7px;

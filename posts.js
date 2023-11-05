@@ -6,7 +6,7 @@ fetch('/JSON/users.json') //Fetch data from local JSON file
             console.log(asd);
             for (let i = 0; i < json.record.users.length; i++) {                
                 let artikkel = document.createElement("article");
-                //artikliPea algus (sisaldab: img ja p)
+                //artikliPea algus (sisaldab: img, p(kellaaeg), p(username))
                 let artikliPea = document.createElement("div");
                 artikliPea.className = "artikliPea";            
                 let avatar = document.createElement("img");
@@ -17,6 +17,10 @@ fetch('/JSON/users.json') //Fetch data from local JSON file
                 }
                 avatar.className = "avatarid";
                 artikliPea.appendChild(avatar);
+                let user = document.createElement("p");
+                user.innerText = json.record.users[i].userName;
+                user.className = "userName";
+                artikliPea.append(user);
                 let kuupaev = document.createElement("p");
                 kuupaev.innerText = json.record.users[i].kuupaev;
                 kuupaev.className = "postDate";
