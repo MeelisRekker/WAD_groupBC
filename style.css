@@ -11,28 +11,33 @@ header {
 }
 
 header img {
-    float: right;
+    align-self: flex-end;
     margin-top: -5px;
     margin-right: 5px;
 }
 
 body {
-    width: 100%;
-    float: left;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.sideBarVasak {
+.mainContent {
+    display: flex;
+}
+
+.sideBarVasak,
+.sideBarParem {
     width: 22%;
-    float: left;
-    height: 850px;
-    margin-top: 15px;
+    background-color: gray;
     border-radius: 5px;
+    margin-top: 15px;
 }
 
 .artikklid {
     background-color: white;
     width: 50%;
-    float: left;
     height: auto;
     margin-top: 10px;
     margin-left: 3%;
@@ -40,17 +45,8 @@ body {
     border-radius: 5px;
 }
 
-.sideBarParem {
-    width: 22%;
-    float: left;
-    height: 850px;
-    margin-top: 15px;
-    border-radius: 5px;
-}
-
 footer {
     background-color: bisque;
-    float: left;
     width: 100%;
     text-align: center;
     border-radius: 5px;
@@ -105,6 +101,7 @@ article p + picture {
 }
 
 #login {
+    margin-top:33%;
     margin-bottom:33%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -211,12 +208,13 @@ label::first-letter {
 #createPost {
     margin: 10px;
 }
-#dropdown{
+
+#dropdown {
 
 }
 
 #dropdown-content {
-    display:'none';
+    display: none;
     background-color: beige;
     margin-left: 85%;
     margin-right:0%;
