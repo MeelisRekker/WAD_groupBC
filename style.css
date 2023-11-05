@@ -211,3 +211,22 @@ label::first-letter {
 #createPost {
     margin: 10px;
 }
+#dropdown{
+    z-index: 99;
+}
+
+#dropdown-content {
+    display:'none';
+    background-color: beige;
+    background: 100%;
+    margin-left: 75%;
+    width: 25%;
+    height:  150px;
+    position:fixed;
+}
+#profileImage{
+    z-index: 99;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
