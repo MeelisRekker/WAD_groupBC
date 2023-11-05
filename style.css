@@ -74,10 +74,11 @@ article p + picture {
     padding-left: 2px;
 }
 
-#artikliPea p {
-    float: right;
-    margin-top: 7px;
-    margin-right: 10px;
+.artikliPea {
+    display: flex;
+    padding: 5px;
+    padding-right: 22px;
+    justify-content: space-between;
 }
 
 .artikklid picture img {

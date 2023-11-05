@@ -7,7 +7,8 @@ fetch('/JSON/users.json') //Fetch data from local JSON file
             for (let i = 0; i < json.record.users.length; i++) {                
                 let artikkel = document.createElement("article");
                 //artikliPea algus (sisaldab: img ja p)
-                let artikliPea = document.createElement("div");                
+                let artikliPea = document.createElement("div");
+                artikliPea.className = "artikliPea";            
                 let avatar = document.createElement("img");
                 if(json.record.users[i].gender === "male"){
                     avatar.src = 'images/meesAvatar.png';
