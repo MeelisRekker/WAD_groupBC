@@ -41,7 +41,7 @@
       // Your form submission logic goes here
 
       // Redirect to index.html
-      this.$router.push('/app');
+      this.$router.push('/');
     },
     },
   };
