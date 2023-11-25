@@ -21,6 +21,7 @@
   <script>
 
   export default {
+    name: 'Signup',
     components: {},
     data() {
       return {

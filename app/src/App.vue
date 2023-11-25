@@ -1,21 +1,19 @@
 <template>
   <div>
     <Header />
-    <Signup />
+    <router-view/>
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from './components/header.vue';
-import Footer from './components/footer.vue';
-import Signup from './components/signup.vue';
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   components: {
     Header,
     Footer,
-    Signup,
   }
 };
 </script>
