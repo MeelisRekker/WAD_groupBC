@@ -18,12 +18,15 @@
   
   <style scoped>
   header {
-    background-color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #285585;
+    border-radius: 5px;
     color: #fff;
     padding: 10px;
   }
   
   nav ul {
+    text-align: center;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -31,7 +34,7 @@
   
   nav ul li {
     display: inline-block;
-    margin-right: 10px;
+    margin: 0 10px;
   }
   
   nav a {

@@ -13,6 +13,7 @@
   
   <style scoped>
   footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     padding: 10px;
     margin-top: 20px;
