@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   { path: '/signup', component: App },
-  { path: '/index.html', component: { template: '<div>MAINPAGE</div>' } }, // Replace with your actual index component
+  { path: '/app', component: { template: '<div>MAINPAGE</div>' } }, // Replace with your actual index component
   { path: '/', redirect: '/signup' },
 ];
 

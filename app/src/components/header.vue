@@ -3,9 +3,8 @@
       <nav>
         <ul>
           <!-- Add your navigation links here -->
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/signup">Signup</a></li>
         </ul>
       </nav>
     </header>

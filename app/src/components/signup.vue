@@ -1,6 +1,5 @@
 <template>
     <div>
-      <Header />
       <div class="signup-form">
         <h2>Sign Up</h2>
         <form @submit.prevent="submitForm">
@@ -16,19 +15,13 @@
           <button type="submit" :disabled="!isPasswordValid" @click="submitForm">Sign Up</button>
         </form>
       </div>
-      <Footer />
     </div>
   </template>
   
   <script>
-  import Header from './header.vue';
-  import Footer from './footer.vue';
-  
+
   export default {
-    components: {
-      Header,
-      Footer,
-    },
+    components: {},
     data() {
       return {
         email: '',
@@ -38,14 +31,16 @@
     },
     methods: {
       checkPassword() {
-        const regex = /^(?=.*[A-Z])(?=.*[a-z].*[a-z])(?=.*\d)(?=.*_)[A-Z].{7,14}$/;
+        const regex = /^(?=.*[A-Z])(?=.*[a-z].*[a-z])(?=.*\d)(?=.*_)[A-Z][a-zA-Z0-9_]{7,14}$/;
+        // const regex = /^(?=.*[A-Z])(?=.*[a-z].*[a-z])(?=.*\d)(?=.*_)[A-Z].{7,14}$/;
+        // const regex = /^(?=.*[A-Z])(?=.*[a-z].*[a-z].*[a-z])(?=.*\d)(?=.*_)[A-Z][a-zA-Z0-9_]{6,13}$/;
         this.isPasswordValid = regex.test(this.password);
       },
       submitForm() {
       // Your form submission logic goes here
 
       // Redirect to index.html
-      this.$router.push('/index.html');
+      this.$router.push('/app');
     },
     },
   };
