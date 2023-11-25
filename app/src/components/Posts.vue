@@ -1,18 +1,28 @@
 <template>
   <div class="posts">
     <!-- TODO jsonist võtta ja foreachiga lisada Post'ide sisu siia -->
-    <Post title="Postitus 1" likes="105" />
-    <Post title="Postitus 2" likes="12" />
+    <div class="sideBarVasak"></div>
+    <div v-for="post in users" :key="post.userId" class="postinfo">
+      <router-link :to="{ name: 'Post',params:{id:post.userId}}">
+          <h2>{{ post.postitus }}</h2>
+      </router-link>
+    </div>
+    <div class="sideBarParem"></div>
   </div>
 </template>
 
 <script>
-import Post from './Post'
-
 export default {
-  name: 'Posts',
-  components: {
-    Post,
+  data(){
+    return{
+      users: []
+    }
+  },
+  mounted(){
+    fetch('http://localhost:3000/users')
+      .then(res=>res.json())
+      .then(data=>this.users=data)
+      .catch(err => console.log(err.message))
   }
 }
 </script>

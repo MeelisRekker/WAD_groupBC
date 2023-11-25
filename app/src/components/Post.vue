@@ -1,16 +1,25 @@
 <template>
-  <div class="post">
-    <h3>Title: {{ title }} </h3>
-    <p> Likes: {{ likes }}</p>
+  <div v-if="post">
+    <div class="post">
+      <h1>Title: {{ post.postitus }} </h1>
+      <p> Likes: {{ post.userName }}</p>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Post',
-  props: {
-    title: String,
-    likes: Number
+  props: ['id'],
+  data(){
+    return{
+      post: null
+    }
+  },
+  mounted(){
+    fetch('http://localhost:3000/users/'+this.id)
+      .then(res => res.json())
+      .then(data => this.post = data)
+      .catch(err => console.log(err.message))
   }
 }
 </script>

@@ -1,0 +1,114 @@
+{
+  "users":[
+      {
+        "userId": 1,
+        "firstName": "Kaarel",
+        "userName": "kaarel1337",
+        "emailAddress": "kaarel1337@gmail.com",
+        "postitus": "Otsin kaaslasi rühmatöö jaoks aines Sissejuhatus Andmeteadusesse, olen rühmas 8. Palun kirjutage kui on huvi ja otsite kaaslasi.",
+        "gender": "male",
+        "pilt": "https://res.cloudinary.com/dzuusseql/image/upload//w_600,c_scale/v1699171418/20230917_080825_j9xxoa.jpg",
+        "kuupaev": "Sept 23, 2023",
+        "piltText": ""
+      },
+      {
+        "userId": 2,
+        "firstName": "Eleri",
+        "userName": "ele99",
+        "emailAddress": "eleri.kreek@gmail.com",
+        "postitus": "Kas keegi teab mis ruumis külalislektor lõunast loengut peab?",
+        "gender": "female",
+        "pilt": "https://res.cloudinary.com/dzuusseql/image/upload/v1699171719/pY3BnhPQYpTxasKfx_vol0vc.jpg",
+        "kuupaev": "Sept 20, 2023",
+        "piltText": "Just chilling out :)"
+      },
+      {
+        "userId": 3,
+        "firstName": "Johanne",
+        "userName": "Johanne",
+        "emailAddress": "johanne.jaaran@gmail.com",
+        "postitus": "Kas kellegil on autoga liikumist Tartu ja Tallinna vahel? Klapiksin kütuse kulud, palun kirjuta.",
+        "gender": "female",
+        "pilt": "https://res.cloudinary.com/dzuusseql/image/upload/w_600,ar_16:9,c_fill,g_auto,e_sharpen/v1699176064/pexels-photo-6008482_qnzzvb.jpg",
+        "kuupaev": "Sept 15, 2023",
+        "piltText": ""
+      },
+      {
+        "userId": 4,
+        "firstName": "Jaana",
+        "userName": "Jaana2008",
+        "emailAddress": "jaana.markovski@gmail.com",
+        "postitus": "Kas kellelgi on häid ideid, kuidas teha WADi kodutöö 3. ülesannet?",
+        "gender": "female",
+        "pilt": "",
+        "kuupaev": "Sept 14, 2023",
+        "piltText": ""
+      },
+      {
+        "userId": 5,
+        "firstName": "Jaagup",
+        "userName": "Jaaguaripoiss",
+        "emailAddress": "jaagup.jaaran@gmail.com",
+        "postitus": "Kas oskate välja tuua, mis on JUnit 5 ja JUnit 4 erinevused? SE kodutöö eeldab viimase kasutamist, aga õppematerjalides peamiselt JUnit 5.",
+        "gender": "male",
+        "pilt": "https://howtoprogram.xyz/wp-content/uploads/2016/08/JUnit-5-vs-JUnit-4.png",
+        "kuupaev": "Sept 13, 2023",
+        "piltText": ""
+      },
+      {
+        "userId": 6,
+        "firstName": "Thomas",
+        "userName": "TheTom",
+        "emailAddress": "thomas.kaarlimae@gmail.com",
+        "postitus": "Kas keegi otsib veel HCI grupitööks kaaslasi?",
+        "gender": "male",
+        "pilt": "",
+        "kuupaev": "Sept 12, 2023",
+        "piltText": ""
+      },
+      {
+        "userId": 7,
+        "firstName": "Jaan",
+        "userName": "Lampyrini",
+        "emailAddress": "jaan.mardikas@gmail.com",
+        "postitus": "Mis erialad olete endale kõrvalerialadeks valinud? Ma kaalun ajaloo ja psühholoogia vahel, aga kardan, et äkki läheb liiga keeruliseks.",
+        "gender": "male",
+        "pilt": "",
+        "kuupaev": "Sept 11, 2023",
+        "piltText": ""
+      },
+      {
+        "userId": 8,
+        "firstName": "Robert",
+        "userName": "Milio",
+        "emailAddress": "robert.taaramae@gmail.com",
+        "postitus": "Kes veel võttis HCI aine, kas ma saan õigesti aru, et aine toimubki ainult veebis?",
+        "gender": "male",
+        "pilt": "",
+        "kuupaev": "Sept 10, 2023",
+        "piltText": ""
+      },
+      {
+        "userId": 9,
+        "firstName": "Timo",
+        "userName": "SecretistheBest",
+        "emailAddress": "timo.traavel@gmail.com",
+        "postitus": "Kas keegi saab aidata digitaalses loogikas? Ei saanud sellest sõrmede peal arvutamisest päris hästi aru.",
+        "gender": "male",
+        "pilt": "",
+        "kuupaev": "Sept 07, 2023",
+        "piltText": ""
+      },
+      {
+        "userId": 10,
+        "firstName": "Sibylla",
+        "userName": "Sibylla8",
+        "emailAddress": "sibylla.kask@gmail.com",
+        "postitus": "Ilusat uut kooliaastat! Millal on võimalik hakata stippi taotlema?",
+        "gender": "female",
+        "pilt": "",
+        "kuupaev": "Sept 01, 2023",
+        "piltText": ""
+      }
+  ]
+}
