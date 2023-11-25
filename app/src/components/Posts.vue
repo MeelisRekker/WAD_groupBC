@@ -1,6 +1,6 @@
 <template>
   <div class="posts">
-    <div v-for="post in users" :key="post.userId" class="postinfo">
+    <div v-for="post in posts" :key="post.id" class="postinfo">
       <Post :post="post" />
     </div>
   </div>
@@ -11,18 +11,18 @@
 import Post from './Post'
 
 export default {
-  components: { 
-    Post, 
+  components: {
+    Post,
   },
-  data(){
-    return{
-      users: []
+  data() {
+    return {
+      posts: []
     }
   },
-  mounted(){
-    fetch('http://localhost:3000/users')
-      .then(res=>res.json())
-      .then(data=>this.users=data)
+  mounted() {
+    fetch('http://localhost:3000/posts')
+      .then(res => res.json())
+      .then(data => this.posts = data)
       .catch(err => console.error(err.message))
   }
 }
@@ -32,13 +32,11 @@ export default {
 .posts {
   display: flex;
   flex-direction: column;
-  gap: 2;
+  gap: 10px;
   justify-content: center;
-
-  background-color: rgb(27, 61, 58);
   width: 50%;
   height: auto;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: 3%;
   margin-right: 3%;
   border-radius: 5px;

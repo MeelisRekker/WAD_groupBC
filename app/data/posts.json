@@ -1,6 +1,7 @@
 {
-  "users":[
+  "posts":[
       {
+        "id": 1,
         "userId": 1,
         "firstName": "Kaarel",
         "userName": "kaarel1337",
@@ -9,9 +10,11 @@
         "gender": "male",
         "pilt": "https://res.cloudinary.com/dzuusseql/image/upload//w_600,c_scale/v1699171418/20230917_080825_j9xxoa.jpg",
         "kuupaev": "Sept 23, 2023",
-        "piltText": ""
+        "piltText": "",
+        "likes": 105
       },
       {
+        "id": 2,
         "userId": 2,
         "firstName": "Eleri",
         "userName": "ele99",
@@ -20,9 +23,11 @@
         "gender": "female",
         "pilt": "https://res.cloudinary.com/dzuusseql/image/upload/v1699171719/pY3BnhPQYpTxasKfx_vol0vc.jpg",
         "kuupaev": "Sept 20, 2023",
-        "piltText": "Just chilling out :)"
+        "piltText": "Just chilling out :)",
+        "likes": 12
       },
       {
+        "id": 3,
         "userId": 3,
         "firstName": "Johanne",
         "userName": "Johanne",
@@ -31,9 +36,11 @@
         "gender": "female",
         "pilt": "https://res.cloudinary.com/dzuusseql/image/upload/w_600,ar_16:9,c_fill,g_auto,e_sharpen/v1699176064/pexels-photo-6008482_qnzzvb.jpg",
         "kuupaev": "Sept 15, 2023",
-        "piltText": ""
+        "piltText": "",
+        "likes": 3
       },
       {
+        "id": 4,
         "userId": 4,
         "firstName": "Jaana",
         "userName": "Jaana2008",
@@ -42,9 +49,11 @@
         "gender": "female",
         "pilt": "",
         "kuupaev": "Sept 14, 2023",
-        "piltText": ""
+        "piltText": "",
+        "likes": 1
       },
       {
+        "id": 5,
         "userId": 5,
         "firstName": "Jaagup",
         "userName": "Jaaguaripoiss",
@@ -53,9 +62,11 @@
         "gender": "male",
         "pilt": "https://howtoprogram.xyz/wp-content/uploads/2016/08/JUnit-5-vs-JUnit-4.png",
         "kuupaev": "Sept 13, 2023",
-        "piltText": ""
+        "piltText": "",
+        "likes": 5
       },
       {
+        "id": 6,
         "userId": 6,
         "firstName": "Thomas",
         "userName": "TheTom",
@@ -64,9 +75,11 @@
         "gender": "male",
         "pilt": "",
         "kuupaev": "Sept 12, 2023",
-        "piltText": ""
+        "piltText": "",
+        "likes": 11
       },
       {
+        "id": 7,
         "userId": 7,
         "firstName": "Jaan",
         "userName": "Lampyrini",
@@ -75,9 +88,11 @@
         "gender": "male",
         "pilt": "",
         "kuupaev": "Sept 11, 2023",
-        "piltText": ""
+        "piltText": "",
+        "likes": 20
       },
       {
+        "id": 8,
         "userId": 8,
         "firstName": "Robert",
         "userName": "Milio",
@@ -86,9 +101,11 @@
         "gender": "male",
         "pilt": "",
         "kuupaev": "Sept 10, 2023",
-        "piltText": ""
+        "piltText": "",
+        "likes": 1
       },
       {
+        "id": 9,
         "userId": 9,
         "firstName": "Timo",
         "userName": "SecretistheBest",
@@ -97,9 +114,11 @@
         "gender": "male",
         "pilt": "",
         "kuupaev": "Sept 07, 2023",
-        "piltText": ""
+        "piltText": "",
+        "likes": 12
       },
       {
+        "id": 10,
         "userId": 10,
         "firstName": "Sibylla",
         "userName": "Sibylla8",
@@ -108,7 +127,8 @@
         "gender": "female",
         "pilt": "",
         "kuupaev": "Sept 01, 2023",
-        "piltText": ""
+        "piltText": "",
+        "likes": 44
       }
   ]
 }

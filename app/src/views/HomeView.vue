@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <div class="sideBarVasak"></div>
+    <div class="sidebarLeft"></div>
     <Posts />
-    <div class="sideBarParem"></div>
+    <div class="sidebarRight"></div>
   </div>
 </template>
 
@@ -22,8 +22,8 @@ export default {
   display: flex;
 }
 
-.sideBarVasak,
-.sideBarParem {
+.sidebarLeft,
+.sidebarRight {
   width: 22%;
   background-color: gray;
   border-radius: 5px;
