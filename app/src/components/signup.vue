@@ -33,8 +33,6 @@
     methods: {
       checkPassword() {
         const regex = /^(?=.*[A-Z])(?=.*[a-z].*[a-z])(?=.*\d)(?=.*_)[A-Z][a-zA-Z0-9_]{7,14}$/;
-        // const regex = /^(?=.*[A-Z])(?=.*[a-z].*[a-z])(?=.*\d)(?=.*_)[A-Z].{7,14}$/;
-        // const regex = /^(?=.*[A-Z])(?=.*[a-z].*[a-z].*[a-z])(?=.*\d)(?=.*_)[A-Z][a-zA-Z0-9_]{6,13}$/;
         this.isPasswordValid = regex.test(this.password);
       },
       submitForm() {
@@ -59,6 +57,7 @@
   
   .form-group {
     margin-bottom: 15px;
+    margin-right: 15px;
   }
   
   label {
