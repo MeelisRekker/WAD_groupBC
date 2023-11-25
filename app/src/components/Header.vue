@@ -19,7 +19,7 @@
   <style scoped>
   header {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #285585;
+    background-color: #0c69cd;
     border-radius: 5px;
     color: #fff;
     padding: 10px;

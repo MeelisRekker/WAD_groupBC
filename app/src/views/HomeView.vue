@@ -22,11 +22,22 @@ export default {
   display: flex;
 }
 
-.sidebarLeft,
-.sidebarRight {
-  width: 22%;
+.sidebarLeft, .sidebarRight {
   background-color: gray;
   border-radius: 5px;
   margin-top: 15px;
 }
+
+@media (max-width: 800px){
+  .sidebarLeft, .sidebarRight {
+    width: 10%;
+  }
+}
+
+@media (min-width: 801px){
+  .sidebarLeft, .sidebarRight {
+    width: 27%;
+  }
+}
+
 </style>

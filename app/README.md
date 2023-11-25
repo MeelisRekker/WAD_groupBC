@@ -10,6 +10,13 @@ npm install
 npm run serve
 ```
 
+
+### To use local json, you also need to run:
+```
+npx json-server --watch data/posts.json
+```
+in a separate terminal window
+
 ### Compiles and minifies for production
 ```
 npm run build
