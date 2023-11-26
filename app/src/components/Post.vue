@@ -15,11 +15,13 @@
       </div>
       <p>{{ post.postitus }}</p>
       <picture v-if="post.pilt">
-          <img :src="post.pilt" v-bind:alt="pic" class="postPicture">
+          <img :src="post.pilt" alt="post picture" class="postPicture">
           <p class="pictureCaption">{{ post.piltText }}</p>
       </picture>
       <div class="likes">
-        <img src="@/assets/images/thumbsUp.png" class="like">
+        <button @click="addLike">
+          <img src="@/assets/images/thumbsUp.png" class="like">
+        </button>
         <p>{{ post.likes }} likes</p>
       </div>
   </article>
@@ -31,6 +33,11 @@ export default {
     post: {
       type: Object,
     }
+  },
+  methods: {
+    addLike() {
+      this.$store.commit("addLike", this.post.id);
+    },
   },
 }
 </script>

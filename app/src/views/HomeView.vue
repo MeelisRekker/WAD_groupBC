@@ -23,7 +23,7 @@ export default {
 }
 
 .sidebarLeft, .sidebarRight {
-  background-color: gray;
+  background-color: rgb(110, 106, 106);
   border-radius: 5px;
   margin-top: 15px;
 }

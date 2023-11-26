@@ -1,9 +1,9 @@
 <template>
   <div class="posts">
-    <div v-if="posts.length == 0" class="loading">
+    <div v-if="posts.length == 0"  class="loading">
       Loading posts ...
     </div>
-     <div v-for="post in posts" :key="post.id" class="postinfo">
+     <div v-else v-for="post in posts" :key="post.id" class="postinfo">
       <Post :post="post" />
     </div>
     <button @click="resetLikes" class="resetButton">Reset Likes</button>
@@ -18,16 +18,13 @@ export default {
   components: {
     Post,
   },
-  data() {
-    return {
-      posts: []
+  computed: {
+    posts() {
+      return this.$store.state.posts;
     }
   },
   mounted() {
-    fetch('https://api.jsonbin.io/v3/b/65626fba0574da7622cbfab2')
-      .then(res => res.json())
-      .then(data => this.posts = data.record.posts)
-      .catch(err => console.error(err.message))
+    this.$store.dispatch('fetchPosts');
     /*
     // Local JSON
     fetch('http://localhost:3000/posts')
@@ -38,8 +35,7 @@ export default {
   },
   methods: {
     resetLikes() {
-      console.log('TODO');
-      // Add your logic to reset likes here
+      this.$store.commit("resetLikes");
     },
   },
 }
