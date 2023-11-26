@@ -79,7 +79,7 @@
   
   button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #435b40f3;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -87,7 +87,7 @@
   }
   
   button:disabled {
-    background-color: #ccc;
+    background-color: rgb(192, 255, 192);
     cursor: not-allowed;
   }
   

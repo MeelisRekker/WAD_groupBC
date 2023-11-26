@@ -83,7 +83,7 @@ export default {
   border-radius: 8px;
   border: none;
   color: #fff;
-  background-color: #0c69cd;
+  background-color: #435b40f3;
   padding: 10px 16px;
   margin-left: 20%;
   margin-right: 20%;
