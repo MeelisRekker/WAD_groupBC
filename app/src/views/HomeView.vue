@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Posts from '../components/Posts'
+import Posts from '../components/Posts.vue'
 
 export default {
   name: 'HomeView',
