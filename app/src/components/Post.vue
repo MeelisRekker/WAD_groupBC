@@ -49,7 +49,7 @@ export default {
   justify-content: space-between;
   padding-left: 3%;
   padding-right: 3%;
-  background-color: #f5f5f5;
+  background-color: background-color: rgb(212, 204, 204);
   border-radius: 5px;
 }
 
