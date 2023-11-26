@@ -26,6 +26,7 @@ export default {
   background-color: rgb(110, 106, 106);
   border-radius: 5px;
   margin-top: 15px;
+  background: linear-gradient(180deg, #a12222f3 0%, #435b40f3 100%);
 }
 
 @media (max-width: 800px){
