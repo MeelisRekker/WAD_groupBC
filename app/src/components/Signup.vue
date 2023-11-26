@@ -10,7 +10,7 @@
           <div class="form-group">
             <label for="password">Password:</label>
             <input type="password" id="password" v-model="password" @input="checkPassword" required />
-            <p v-if="!isPasswordValid" class="error-text">Password is not valid. Please follow the conditions.</p>
+            <p v-if="!isPasswordValid" class="error-text">Password is not valid. It should have 8 to 15 characters, atleast one capital letter, atleast 2 lowercase letters, atleast one number, start with capital letter and include the character "-"</p>
           </div>
           <button type="submit" :disabled="!isPasswordValid" @click="submitForm">Sign Up</button>
         </form>
