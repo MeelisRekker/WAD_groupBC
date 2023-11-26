@@ -18,7 +18,7 @@ Veebirakenduse loomine, kodutöö.
   - *Task8:* fixed sidebar scaling with length of posts amount. Added few effects to elements, added few more colors
 
   Some tasks are left unmentioned but have been worked on.
- $${\color{orange}Submitted}$$
+ $${\color{green}Graded}$$
  *Some Javascript example for future markup:*
   ```js
   function logSomething(something) {
@@ -26,6 +26,15 @@ Veebirakenduse loomine, kodutöö.
   }
   ```
  </details>
+ <details>
+  <summary>Homework 3:</summary>
+ Tasks: Develop webpage as app using Vue and +Vuex techniques.
+   
+   - *Tasks1-5:* Webpage transition to Vue completed.
+   - *Task6:* Password check implemented.
+   - *Task7:* Changed colors to christmas theme.
+ $${\color{orange}Submitted}$$
+</details>
 
  
   
