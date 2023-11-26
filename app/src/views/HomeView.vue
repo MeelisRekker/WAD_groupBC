@@ -20,6 +20,7 @@ export default {
 <style scoped>
 .home {
   display: flex;
+  background: linear-gradient(180deg, #582C2C 0%, #ffffff 100%);
 }
 
 .sidebarLeft, .sidebarRight {
