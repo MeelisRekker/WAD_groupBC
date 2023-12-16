@@ -1,4 +1,4 @@
-# app
+# WAD_groupBC project frontend
 
 ## Project setup
 ```
