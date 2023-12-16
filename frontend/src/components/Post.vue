@@ -11,19 +11,9 @@
           />
           <p>{{ post.userName }}</p>
         </span>
-        <p>{{ post.kuupaev }}</p>
+        <p>{{ new Date(post.date).toLocaleDateString() }}</p>
       </div>
-      <p>{{ post.postitus }}</p>
-      <picture v-if="post.pilt">
-          <img :src="post.pilt" alt="post picture" class="postPicture">
-          <p class="pictureCaption">{{ post.piltText }}</p>
-      </picture>
-      <div class="likes">
-        <button @click="addLike">
-          <img src="@/assets/images/thumbsUp.png" class="like">
-        </button>
-        <p>{{ post.likes }} likes</p>
-      </div>
+      <p>{{ post.body }}</p>
   </article>
 </template>
 
@@ -35,9 +25,11 @@ export default {
     }
   },
   methods: {
+    /*
     addLike() {
       this.$store.commit("addLike", this.post.id);
     },
+    */
   },
 }
 </script>

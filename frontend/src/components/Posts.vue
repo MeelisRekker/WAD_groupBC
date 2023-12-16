@@ -1,12 +1,12 @@
 <template>
   <div class="posts">
-    <div v-if="posts.length == 0"  class="loading">
+    <div v-if="posts === undefined"  class="loading">
       Loading posts ...
     </div>
      <div v-else v-for="post in posts" :key="post.id" class="postinfo">
       <Post :post="post" />
     </div>
-    <button @click="resetLikes" class="resetButton">Reset Likes</button>
+    <button @click="deletePosts" class="resetButton">Delete Posts</button>
   </div>
 </template>
 
@@ -18,24 +18,20 @@ export default {
   components: {
     Post,
   },
-  computed: {
-    posts() {
-      return this.$store.state.posts;
+  data(){
+    return{
+      posts: undefined
     }
   },
   mounted() {
-    this.$store.dispatch('fetchPosts');
-    /*
-    // Local JSON
-    fetch('http://localhost:3000/posts')
+    fetch('http://localhost:3000/api/posts')
       .then(res => res.json())
       .then(data => this.posts = data)
       .catch(err => console.error(err.message))
-    */
   },
   methods: {
-    resetLikes() {
-      this.$store.commit("resetLikes");
+    deletePosts() {
+      console.log('DELETE posts');
     },
   },
 }

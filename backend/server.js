@@ -120,6 +120,19 @@ app.post('/auth/login', async(req, res) => {
     }
 });
 
+//TODO AUTH!
+app.get('/api/posts', async(req, res) => {
+    try {
+        console.log("get posts request has arrived");
+        const posts = await pool.query(
+            "SELECT * FROM posts"
+        );
+        res.json(posts.rows);
+    } catch (err) {
+        console.error(err.message);
+    }
+});
+
 //logout a user = deletes the jwt
 app.get('/auth/logout', (req, res) => {
     console.log('delete jwt request arrived');
