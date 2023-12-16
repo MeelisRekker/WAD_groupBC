@@ -29,6 +29,8 @@ app.listen(port, () => {
 });
 
 
+// Code lifted from Lab 13 backend
+
 // is used to check whether a user is authinticated
 app.get('/auth/authenticate', async(req, res) => {
     console.log('authentication request has been arrived');
@@ -120,6 +122,13 @@ app.post('/auth/login', async(req, res) => {
     }
 });
 
+//logout a user = deletes the jwt
+app.get('/auth/logout', (req, res) => {
+    console.log('delete jwt request arrived');
+    res.status(202).clearCookie('jwt').json({ "Msg": "cookie cleared" }).send
+});
+
+// Following code lifted from Lab 12 backend
 //TODO AUTH!
 app.get('/api/posts', async(req, res) => {
     try {
@@ -133,8 +142,67 @@ app.get('/api/posts', async(req, res) => {
     }
 });
 
-//logout a user = deletes the jwt
-app.get('/auth/logout', (req, res) => {
-    console.log('delete jwt request arrived');
-    res.status(202).clearCookie('jwt').json({ "Msg": "cookie cleared" }).send
+app.post('/api/posts', async(req, res) => {
+    try {
+        console.log("a post request has arrived");
+        const post = req.body;
+        const newpost = await pool.query(
+            "INSERT INTO posts(body) values ($1) RETURNING*", [post.body]
+            // $1,is mapped to the first element of the passed array (post.body)
+            // The RETURNING keyword in PostgreSQL allows returning a value from the insert or update statement.
+            // using "*" after the RETURNING keyword in PostgreSQL, will return everything
+        );
+        res.json(newpost);
+    } catch (err) {
+        console.error(err.message);
+    }
+}); 
+
+app.get('/api/posts/:id', async(req, res) => {
+    try {
+        console.log("get a post with route parameter request has arrived");
+        // The req.params property is an object containing properties mapped to the named route "parameters". 
+        // For example, if you have the route /posts/:id, then the "id" property is available as req.params.id.
+        const { id } = req.params; // assigning all route "parameters" to the id "object"
+        const posts = await pool.query( // pool.query runs a single query on the database.
+            //$1 is mapped to the first element of { id } (which is just the value of id). 
+            "SELECT * FROM posts WHERE id = $1", [id]
+        );
+        res.json(posts.rows[0]); // we already know that the row array contains a single element, and here we are trying to access it
+        // The res.json() function sends a JSON response. 
+        // This method sends a response (with the correct content-type) that is the parameter converted to a JSON string using the JSON.stringify() method.
+    } catch (err) {
+        console.error(err.message);
+    }
+}); 
+
+// Task 4
+app.put('/api/posts/:id', async(req, res) => {
+    try {
+        const { id } = req.params;
+        const post = req.body;
+        
+        console.log("update request has arrived", req.params, req.body);
+        const updatepost = await pool.query(
+            "UPDATE posts SET body = $2 WHERE id = $1", [id, post.body]
+        );
+        res.json(updatepost);
+    } catch (err) {
+        console.error(err.message);
+    }
 });
+
+// Task 5
+app.delete('/api/posts/:id', async(req, res) => {
+    try {
+        const { id } = req.params;
+        //const post = req.body; // we do not need a body for a delete request
+        console.log("delete a post request has arrived");
+        const deletepost = await pool.query(
+            "DELETE FROM posts WHERE id = $1", [id]
+        );
+        res.json(deletepost);
+    } catch (err) {
+        console.error(err.message);
+    }
+}); 

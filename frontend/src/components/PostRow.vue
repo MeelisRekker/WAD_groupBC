@@ -1,5 +1,6 @@
 <template>
   <article v-if="post" class="post">
+    <a class="singlepost" :href="'/post/' + post.id">
       <div class="postHeader">
         <span class="avatar">
           <img 
@@ -11,9 +12,11 @@
           />
           <p>{{ post.userName }}</p>
         </span>
+        <!-- makes a date object from string and displays it as date (without time) --> 
         <p>{{ new Date(post.date).toLocaleDateString() }}</p>
       </div>
       <p>{{ post.body }}</p>
+    </a>
   </article>
 </template>
 
@@ -76,6 +79,11 @@ export default {
 p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color:  #000;
 }
 
 .likes {

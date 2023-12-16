@@ -1,22 +1,39 @@
 <template>
   <div class="posts">
+    <div class="topButtons">
+      <button @click="logout" class="button">Logout</button>
+    </div>
     <div v-if="posts === undefined"  class="loading">
       Loading posts ...
     </div>
-     <div v-else v-for="post in posts" :key="post.id" class="postinfo">
-      <Post :post="post" />
+    <div v-else v-for="post in posts" :key="post.id" class="postinfo">
+      <PostRow :post="post" />
     </div>
-    <button @click="deletePosts" class="resetButton">Delete Posts</button>
+    <div class="bottomButtons">
+      <!-- 
+        Router Link as button, example:
+        https://stackoverflow.com/questions/45638239/enclosing-a-router-link-tag-in-a-button-in-vuejs
+      -->
+      <router-link
+        to="/addpost"
+        v-slot="{href, route, navigate}"
+      >
+        <button :href="href" @click="navigate" class='button'>
+          {{ route.name }}
+        </button>
+    </router-link>
+      <button @click="deletePosts" class="button">Delete All</button>
+    </div>
   </div>
 </template>
 
 <script>
 
-import Post from './Post.vue'
+import PostRow from './PostRow.vue'
 
 export default {
   components: {
-    Post,
+    PostRow,
   },
   data(){
     return{
@@ -32,6 +49,12 @@ export default {
   methods: {
     deletePosts() {
       console.log('DELETE posts');
+    },
+    addPost() {
+      console.log('Add post');
+    },
+    logout() {
+      console.log('Logout!');
     },
   },
 }
@@ -71,18 +94,29 @@ export default {
   padding-bottom: 100px;
 }
 
-.resetButton {
+.topButtons {
+  display: flex;
+  justify-content: center;
+}
+
+
+.bottomButtons {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.button {
   border-radius: 8px;
   border: none;
   color: #fff;
   background-color: #435b40f3;
   padding: 10px 16px;
-  margin-left: 20%;
-  margin-right: 20%;
   cursor: pointer;
 }
 
-.resetButton:hover {
+.button:hover {
   background-color: #87CEEB;
 }
 </style>
