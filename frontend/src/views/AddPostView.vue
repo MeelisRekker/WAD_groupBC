@@ -19,9 +19,7 @@ export default {
   data() {
     return {
       post: {
-        title: "",
         body: "",
-        urllink: "",
       },
     };
   },

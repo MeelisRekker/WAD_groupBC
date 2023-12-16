@@ -1,7 +1,7 @@
 <template>
   <div class="posts">
     <div class="topButtons">
-      <button @click="logout" class="button">Logout</button>
+      <button v-if="authResult" @click="logout" class="button">Logout</button>
     </div>
     <div v-if="posts === undefined"  class="loading">
       Loading posts ...
@@ -29,6 +29,7 @@
 
 <script>
 
+import auth from "../auth";
 import PostRow from './PostRow.vue'
 
 export default {
@@ -36,8 +37,9 @@ export default {
     PostRow,
   },
   data(){
-    return{
-      posts: undefined
+    return {
+      posts: undefined,
+      authResult: auth.authenticated(),
     }
   },
   mounted() {
@@ -48,13 +50,25 @@ export default {
   },
   methods: {
     deletePosts() {
-      console.log('DELETE posts');
-    },
-    addPost() {
-      console.log('Add post');
+      console.log('TODO: DELETE ALL posts');
     },
     logout() {
-      console.log('Logout!');
+      // Code from LAb 13 frontend
+      fetch("http://localhost:3000/auth/logout", {
+          credentials: 'include', //  Don't forget to specify this if you need cookies
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        console.log('jwt removed');
+        //console.log('jwt removed:' + auth.authenticated());
+        this.$router.push("/login");
+        //location.assign("/");
+      })
+      .catch((e) => {
+        console.log(e);
+        console.log("error logout");
+      });
     },
   },
 }

@@ -10,7 +10,7 @@
           <div class="form-group">
             <label for="password">Password:</label>
             <input type="password" id="password" v-model="password" @input="checkPassword" required />
-            <p v-if="!isPasswordValid" class="error-text">Password is not valid. It should have 8 to 15 characters, atleast one capital letter, atleast 2 lowercase letters, atleast one number, start with capital letter and include the character "-"</p>
+            <p v-if="!isPasswordValid" class="error-text">Password is not valid. It should have at least 8 characters and one number</p>
           </div>
           <button type="submit" :disabled="!isPasswordValid" @click="submitForm">Sign Up</button>
         </form>
@@ -32,15 +32,35 @@
     },
     methods: {
       checkPassword() {
-        const regex = /^(?=.*[A-Z])(?=.*[a-z].*[a-z])(?=.*\d)(?=.*_)[A-Z][a-zA-Z0-9_]{7,14}$/;
+        const regex = /^(?=.*\d).{8,}$/;
         this.isPasswordValid = regex.test(this.password);
       },
       submitForm() {
-      // Your form submission logic goes here
-
-      // Redirect to index.html
-      this.$router.push('/');
-    },
+        // code from Lab 13 frontend
+        let data = {
+          email: this.email,
+          password: this.password
+        };
+  
+        // using Fetch - post method - send an HTTP post request to the specified URI with the defined body
+        fetch("http://localhost:3000/auth/signup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+            credentials: 'include', //  Don't forget to specify this if you need cookies
+            body: JSON.stringify(data),
+        })
+        .then((response) => response.json())
+        .then((data) => {
+        console.log(data);
+        this.$router.push("/");
+        })
+        .catch((e) => {
+          console.log(e);
+          console.log("error");
+        });
+      },
     },
   };
   </script>
