@@ -24,6 +24,27 @@ const generateJWT = (id) => {
         //jwt.sign(payload, secret, [options, callback]), and it returns the JWT as string
 }
 
+// From ChatGPT to verify the token
+const verifyJWT = (req, res, next) => {
+    const token = req.cookies.jwt;
+
+    if (!token) {
+        console.warn('missing JWT token');
+        return res.status(401).json({ error: "Unauthorized - Missing token" });
+    }
+
+    jwt.verify(token, secret, (err, decoded) => {
+        if (err) {
+            console.warn('Invalid token');
+            return res.status(401).json({ error: "Unauthorized - Invalid token" });
+        }
+
+        // Attach the decoded user ID to the request for further use
+        req.userId = decoded.id;
+        next(); // Continue with the next middleware or route handler
+    });
+};
+
 app.listen(port, () => {
     console.log("Server is listening to port " + port)
 });
@@ -129,8 +150,8 @@ app.get('/auth/logout', (req, res) => {
 });
 
 // Following code lifted from Lab 12 backend
-//TODO AUTH!
-app.get('/api/posts', async(req, res) => {
+
+app.get('/api/posts', verifyJWT, async (req, res) => {
     try {
         console.log("get posts request has arrived");
         const posts = await pool.query(
@@ -142,7 +163,7 @@ app.get('/api/posts', async(req, res) => {
     }
 });
 
-app.post('/api/posts', async(req, res) => {
+app.post('/api/posts', verifyJWT, async(req, res) => {
     try {
         console.log("a post request has arrived");
         const post = req.body;
@@ -158,7 +179,7 @@ app.post('/api/posts', async(req, res) => {
     }
 }); 
 
-app.get('/api/posts/:id', async(req, res) => {
+app.get('/api/posts/:id', verifyJWT, async(req, res) => {
     try {
         console.log("get a post with route parameter request has arrived");
         // The req.params property is an object containing properties mapped to the named route "parameters". 
@@ -177,7 +198,7 @@ app.get('/api/posts/:id', async(req, res) => {
 }); 
 
 // Task 4
-app.put('/api/posts/:id', async(req, res) => {
+app.put('/api/posts/:id', verifyJWT, async(req, res) => {
     try {
         const { id } = req.params;
         const post = req.body;
@@ -193,7 +214,7 @@ app.put('/api/posts/:id', async(req, res) => {
 });
 
 // Task 5
-app.delete('/api/posts/:id', async(req, res) => {
+app.delete('/api/posts/:id', verifyJWT, async(req, res) => {
     try {
         const { id } = req.params;
         //const post = req.body; // we do not need a body for a delete request

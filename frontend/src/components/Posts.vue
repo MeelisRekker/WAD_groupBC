@@ -43,7 +43,9 @@ export default {
     }
   },
   mounted() {
-    fetch('http://localhost:3000/api/posts')
+    fetch('http://localhost:3000/api/posts', {
+      credentials: 'include', //  Don't forget to specify this if you need cookies
+    })
       .then(res => res.json())
       .then(data => this.posts = data)
       .catch(err => console.error(err.message))

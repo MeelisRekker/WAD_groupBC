@@ -35,6 +35,7 @@ export default {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
+        credentials: 'include', //  Don't forget to specify this if you need cookies
       })
       .then((response) => {
         console.log(response.data);

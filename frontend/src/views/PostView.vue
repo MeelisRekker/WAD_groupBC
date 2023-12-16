@@ -31,7 +31,9 @@ export default {
   methods: {
     fetchPost(id) {
       // fetch one post with the specied id (id)
-      fetch(`http://localhost:3000/api/posts/${id}`)
+      fetch(`http://localhost:3000/api/posts/${id}`, {
+        credentials: 'include', //  Don't forget to specify this if you need cookies
+      })
         .then((response) => response.json())
         .then((data) => (this.post = data))
         .catch((err) => console.log(err.message));
@@ -43,6 +45,7 @@ export default {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: 'include', //  Don't forget to specify this if you need cookies
         body: JSON.stringify(this.post),
       })
         .then((response) => {
@@ -60,6 +63,7 @@ export default {
       fetch(`http://localhost:3000/api/posts/${this.post.id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
+        credentials: 'include', //  Don't forget to specify this if you need cookies
       })
         .then((response) => {
           console.log(response.data);
