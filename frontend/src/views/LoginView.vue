@@ -10,7 +10,8 @@
         <div class="form-group">
           <label for="password">Password:</label>
           <input type="password" id="password" v-model="password" required />
-          </div>
+          <p v-if="error" class="error-text">{{error}}</p>
+        </div>
         <div class="buttons">
         <!-- type submit triggers the @submit.prevent above! -->
         <button type="submit">Log In</button>
@@ -30,6 +31,7 @@ export default {
     return {
       email: '',
       password: '',
+      error: undefined,
     };
   },
   methods: {
@@ -52,8 +54,11 @@ export default {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        this.$router.push("/");
-        //location.assign("/");
+        if(data.error) {
+          this.error = data.error;
+        } else {
+          this.$router.push("/");
+        }
       })
       .catch((e) => {
         console.error(e);
