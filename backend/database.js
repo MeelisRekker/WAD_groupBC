@@ -2,7 +2,7 @@ const Pool = require('pg').Pool;
 
 const pool = new Pool({
     user: "postgres",
-    password: "par00l", //change to your local env
+    password: "postgres", //change to your local env
     database: "wad_groupbc",  //change to your local env
     host: "localhost",
     port: "5432"
