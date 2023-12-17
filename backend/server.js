@@ -177,6 +177,16 @@ app.post('/api/posts', verifyJWT, async(req, res) => {
     } catch (err) {
         console.error(err.message);
     }
+});
+
+app.delete('/api/posts/', verifyJWT, async(req, res) => {
+    try {
+        console.log("delete all posts from database");
+        const deleteposts = await pool.query("DELETE FROM posts");
+        res.json(deleteposts);
+    } catch (err) {
+        console.error(err.message);
+    }
 }); 
 
 app.get('/api/posts/:id', verifyJWT, async(req, res) => {

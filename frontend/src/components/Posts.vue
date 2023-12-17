@@ -59,38 +59,18 @@ export default {
       .then(data => this.posts = data)
       .catch(err => console.error(err.message))
     },
-    deletePost(post) {
-      // using Fetch - delete method - delets a specific post based on the passed id
-      fetch(`http://localhost:3000/api/posts/${post}`, {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-        credentials: 'include', //  Don't forget to specify this if you need cookies
-      })
-        .then((response) => {
-          console.log(response.data);
-          // We are using the router instance of this element to navigate to a different URL location
-          this.fetchPosts();
-        })
-        .catch((e) => {
-          console.error(e);
-        });
-    },
     deletePosts() {
       fetch(`http://localhost:3000/api/posts`, {
+        method: "DELETE",
         credentials: 'include'
       })
-      .then(response => response.json()) // Parse the JSON response
-      .then(posts => {
-        //console.log(posts); // Check the structure of the response
-        // Assuming the posts are in an array called 'posts'
-        for (const post of posts) {
-          this.deletePost(post.id); // Assuming there's a deletePost method that takes the post ID
-        }
+      .then((response) => {
+          console.log(response.data);
+          this.fetchPosts();
         })
       .catch((e) => {
         console.error(e);
       });
-      this.reload
     },
     logout() {
       // Code from LAb 13 frontend
