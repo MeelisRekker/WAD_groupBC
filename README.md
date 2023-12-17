@@ -33,8 +33,15 @@ Veebirakenduse loomine, kodutöö.
    - *Tasks1-5:* Webpage transition to Vue completed.
    - *Task6:* Password check implemented.
    - *Task7:* Changed colors to christmas theme.
- $${\color{orange}Submitted}$$
+ $${\color{green}Graded}$$
 </details>
-
+<details>
+  <summary>Homework 4:</summary>
+ Tasks: Implement Node.js, PostgreSQL database, and JWT token enchange to ongoing project.
+   
+   - *HomepageTasks:* Implemented.
+   - *PostpageTasks:* Implemented fully.
+ $${\color{yellow}Submitted}$$
+</details>
  
   
